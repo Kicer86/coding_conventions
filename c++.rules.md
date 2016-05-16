@@ -26,8 +26,8 @@
   - definitions and declarations
   
   Each group should be separated with empty line. 
-  #include directives should be grouped by library (starting with std, ending with local include files) and each group should be separated with empty line. 
-  #include directives should be sorted alphabetically (by file path/name) within each group.
+  \#include directives should be grouped by library (starting with std, ending with local include files) and each group should be separated with empty line. 
+  \#include directives should be sorted alphabetically (by file path/name) within each group.
 
 * C/C++ files layout is the same as for header files but related header file should be included as first to be sure it is self-sufficient.
   
