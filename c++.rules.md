@@ -30,4 +30,8 @@
   \#include directives should be sorted alphabetically (by file path/name) within each group.
 
 * C/C++ files layout is the same as for header files but related header file should be included as first to be sure it is self-sufficient.
-  
+ 
+
+### Coding tips
+* Consider using **std::function** instead of tiny interfaces in classes which emit notifications. <br/>
+  This reduces number of small classes and multiple inheritance situations. It is also more flexible solution as clients can provide free functions and are not forced to use particular function names.
