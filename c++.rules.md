@@ -1,14 +1,28 @@
 
 ### Formatting
 
+#### General
+
 * No tabs, 4 spaces indention
 * Spaces around arithmetic operators. Example: int a __=__ 1 __+__ 2;
- 
+
+#### Arguments
+* Put space between type name and reference (&) or pointer (\*) character when there is no argument name.<br/>
+  Example:<br/>
+           void foo(bar *); <br/>
+           void foo(bar &, foobar *);
+
+* Do not put space between type name and reference (&) or pointer (\*) character when there is argument name
+  or this is return type.<br/>
+  Example: <br/>
+           const int& getInt() const;<br/>
+           void setValue(Type& value);<br/>
+           void setModel(Model\* model);<br/>
+           Model\* getModel();<br/>
 ### Naming
 * Type name should start with capital letter and have a capital letter for each new word. 
 
-  Example: Class, ClassName, MyTypeDef
-  
+  Example: Class, ClassName, MyTypeDef<br/>
   This rule applies to classes, structs, typedefs, enums etc.
   
 * Functions and methods should start with lowercase and have capital letter for each new word.
