@@ -19,6 +19,7 @@
            void setValue(Type& value);<br/>
            void setModel(Model\* model);<br/>
            Model\* getModel();<br/>
+
 ### Naming
 * Type name should start with capital letter and have a capital letter for each new word. 
 
@@ -45,6 +46,9 @@
 
 * C/C++ files layout is the same as for header files but related header file should be included as first to be sure it is self-sufficient.
  
+### Functions
+* Functions should have no more than 2-3 arguments. It increases readability and reduces possible problems with single responsibility.
+* Return by value. It is easier to read the code, clients can *const* returned value, RVO and move semantic make it fast as returning by in/out argument. 
 
 ### Coding tips
 * Consider using **std::function** instead of tiny interfaces in classes which emit notifications. <br/>
