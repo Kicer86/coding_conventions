@@ -20,6 +20,12 @@
            void setModel(Model\* model);<br/>
            Model\* getModel();<br/>
 
+* Do not place argument name in header file when argument type clearly defines its purpose. Example: <br/>
+  void setPath(const std::string &);<br/>
+  void setWidth(int pixels);   // setWidth(int) could be not enought<br/>
+  void setData(const Date &);<br/>
+  void ClassConstructor(const Time& startTime, const Time& endTime); // meaning of arguments in constructor may be not clear<br/>
+
 ### Naming
 * Type name should start with capital letter and have a capital letter for each new word. 
 
