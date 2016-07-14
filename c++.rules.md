@@ -64,7 +64,7 @@
 * When it is necessary to pass **std::unique_ptr**'s content use raw pointer (**std::unique_ptr::get()**). There is no need to pass whole **std::unique_ptr** as reference.
 
 ### C++ features
-* Do not use RTTI. When you need it then must be something wrong. Exception from this rule is to use **dynamic_cast<>** in **assert**s.
+* Do not use RTTI. When you need it there must be something wrong. Exception from this rule is to use **dynamic_cast<>** in **assert**s.
 * Do not use exceptions. <br/>
   - when new **throw** is added to the function it is necessary for the developer to analyze all its callers if there is proper **try**-**catch** sequence.
   - it is necessary to remember about possible exceptions when writing code. Each used function may **throw**.
