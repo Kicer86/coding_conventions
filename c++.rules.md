@@ -57,9 +57,9 @@
 * Return by value. It is easier to read the code, clients can *const* returned value, RVO and move semantic make it fast as returning by in/out argument. 
 
 ### Memory management
-* Do not use **new** nor **delete** keywords. Instead use std::make_unique/std::make_shared. This helps memory management:
+* Do not use **new** nor **delete** keywords. Use std::make_unique or std::make_shared instead. This helps memory management:
   - object's ownership can be passed only with std::unique_ptr move which is clear and obvious. 
-  - **delete** will not be ever called on invalid memory (like stack object passwd as raw pointer).
+  - **delete** will not be ever called on invalid memory (like stack object passed as raw pointer).
 
 ### Coding tips
 * Consider using **std::function** instead of tiny interfaces in classes which emit notifications. <br/>
