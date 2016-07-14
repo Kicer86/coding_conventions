@@ -60,6 +60,8 @@
 * Do not use **new** nor **delete** keywords. Use std::make_unique or std::make_shared instead. This helps memory management:
   - object's ownership can be passed only with std::unique_ptr move which is clear and obvious. 
   - **delete** will not be ever called on invalid memory (like stack object passed as raw pointer).
+  
+* When it is necessary to pass **std::unique_ptr**'s content use raw pointer (**std::unique_ptr::get()**). There is no need to pass whole **std::unique_ptr** as reference.
 
 ### Coding tips
 * Consider using **std::function** instead of tiny interfaces in classes which emit notifications. <br/>
