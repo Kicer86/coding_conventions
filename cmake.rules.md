@@ -7,3 +7,5 @@
   Examples:<br/>
   set_source_files_properties(file.cpp PROPERTIES COMPILE_FLAGS ${OpenMP_CXX_FLAGS})<br/>
   target_compile_options(project_name PRIVATE foo bar)
+* Prefer **target_include_directories** over **include_directories**<br/>
+  **target_include_directories** is target specific and allows to control visibility for target's clients.
