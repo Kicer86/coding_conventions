@@ -69,6 +69,10 @@
   - when new **throw** is added to the function it is necessary for the developer to analyze all its callers if there is proper **try**-**catch** sequence.
   - it is necessary to remember about possible exceptions when writing code. Each used function may **throw**.
 
+### Macros
+* Macros should be used only as include guard. Do not use it for other reasons as long as your goal can be achieved with c++ (templates for examples).
+* Name macros with BIG_LETTERS_AND_UNDERSCORES.
+
 ### Coding tips
 * Consider using **std::function** instead of tiny interfaces in classes which emit notifications. <br/>
   This reduces number of small classes and multiple inheritance situations. It is also more flexible solution as clients can provide free functions and are not forced to use particular function names.
